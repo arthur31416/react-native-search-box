@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component, PropTypes } from 'react';
 import {
     Text,
@@ -254,6 +256,7 @@ class Search extends Component {
                     style={[
                         styles.input,
                         this.props.placeholderTextColor && { color: this.props.placeholderTextColor },
+                        this.props.placeholderBackgroundColor && {backgroundColor: this.props.placeholderBackgroundColor },
                         this.props.inputHeight && { height: this.props.inputHeight },
                         this.props.inputBorderRadius && { borderRadius: this.props.inputBorderRadius },
                         {
@@ -416,6 +419,7 @@ Search.propTypes = {
      */
     backgroundColor: PropTypes.string,
     placeholderTextColor: PropTypes.string,
+    placeholderBackgroundColor: PropTypes.string,
     titleCancelColor: PropTypes.string,
     tintColorSearch: PropTypes.string,
     tintColorDelete: PropTypes.string,
